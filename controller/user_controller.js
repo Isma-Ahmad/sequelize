@@ -29,20 +29,20 @@ class UserController {
   }
 
   async createUser(req, res) {
-    const { name } = req.body;
+    const {name} = req.body;
     await this.userService.createUser(name);
     res.json("User added successfully..!!");
   }
 
   async updateUser(req, res) {
-    const { id } = req.params;
-    const { name } = req.body;
+    const {id} = req.params;
+    const {name} = req.body;
     await this.userService.updateUser(id, name);
     res.json("User updated successfully..!!");
   }
 
   async deleteUser(req, res) {
-    const { id } = req.params;
+    const {id} = req.params;
     await this.userService.deleteUser(id);
     res.send("User data delete successfully..!!");
   }

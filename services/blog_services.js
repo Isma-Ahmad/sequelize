@@ -1,8 +1,10 @@
+const { title } = require("process");
 const { Blog } = require("../models");
 
 class BlogService {
   async getBlog() {
     return await Blog.findAll();
+    
   }
 
   async getBlogById(id) {
@@ -16,7 +18,7 @@ class BlogService {
   }
 
   async createBlog(users_id, title, content) {
-    return await Blog.create({ users_id, title, content });
+    return await Blog.create({users_id, title, content});
   }
 
   async updateBlog(id, title, content) {

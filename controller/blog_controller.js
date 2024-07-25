@@ -4,6 +4,7 @@ class BlogController {
   constructor() {
     this.blogService = new BlogService();
     this.createBlog = this.createBlog.bind(this);
+    this.getBlog = this.getBlog.bind(this);
     this.getBlogByUser = this.getBlogByUser.bind(this);
     this.getBlogById = this.getBlogById.bind(this);
     this.updateBlog = this.updateBlog.bind(this);
